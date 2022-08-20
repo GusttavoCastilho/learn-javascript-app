@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "learn-javacript-app",
+    "slug": "learn-javacript-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
