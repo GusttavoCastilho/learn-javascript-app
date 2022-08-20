@@ -1,4 +1,14 @@
 {
-  "compilerOptions": {},
-  "extends": "expo/tsconfig.base"
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+      "strict": true,
+      "useUnknownInCatchVariables": false,
+      "baseUrl": "./",
+      "paths": {
+          "@src/*": [ "./src/*"],
+          "@components/*": [ "./src/presentation/components/*"],
+          "@screens/*": [ "./src/presentation/screens/*"],
+          "@assets/*": [ "assets/*"],
+      },
+  },
 }
