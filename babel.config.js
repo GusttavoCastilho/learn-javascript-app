@@ -12,6 +12,7 @@ module.exports = function (api) {
             "@screens": "./src/presentation/screens",
             "@assets": "./assets",
             "@styles": "./src/presentation/styles",
+            "@utils": "./src/presentation/utils",
           },
           extensions: [".js", ".jsx", ".ts", ".tsx"],
           root: ["./src"],
