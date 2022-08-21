@@ -9,6 +9,7 @@
           "@components/*": [ "./src/presentation/components/*"],
           "@screens/*": [ "./src/presentation/screens/*"],
           "@assets/*": [ "assets/*"],
+          "@styles/*": ["./src/presentation/styles/*"]
       },
   },
 }
