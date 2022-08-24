@@ -10,7 +10,8 @@
           "@screens/*": [ "./src/presentation/screens/*"],
           "@assets/*": [ "assets/*"],
           "@styles/*": ["./src/presentation/styles/*"],
-          "@utils/*": ["./src/presentation/utils/*"]
+          "@utils/*": ["./src/presentation/utils/*"],
+          "@models/*": ["./src/domain/models/*"]
       },
   },
 }
