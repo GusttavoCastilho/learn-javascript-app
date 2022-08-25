@@ -23,7 +23,6 @@ jest.mock("expo", () => ({
 }));
 
 const makeSut = (props?: ResourceListItemProps) => {
-  console.log(props);
   return renderWithTheme(<ResourceListItem {...mockedResource} {...props} />);
 };
 
@@ -61,8 +60,8 @@ describe("<ResourceListItem />", () => {
   });
 
   it("Should render line indicator if not last item", () => {
-    const { getByTestId, debug } = makeSut({ isLast: true });
-    debug();
+    const { getByTestId } = makeSut({ isLast: true });
+
     const lineIndicator = getByTestId("line-indicator");
     expect(lineIndicator).toBeDefined();
   });
