@@ -31,20 +31,22 @@ export const CircleProgress = (props: CircularProgressProps) => {
 
         {progress > 0 && (
           <Progress testID="circle-progress">
-            <Circle
-              stroke={
-                progress >= 1 ? theme.colors.primary : theme.colors.secondary
-              }
-              fill="none"
-              cx={size / 2}
-              cy={size / 2}
-              r={radius}
-              strokeDasharray={`${circum} ${circum}`}
-              strokeDashoffset={radius * Math.PI * 2 * (svgProgress / 100)}
-              strokeLinecap="round"
-              transform={`rotate(-90, ${size / 2}, ${size / 2})`}
-              {...{ strokeWidth }}
-            />
+            <Svg width={size} height={size}>
+              <Circle
+                stroke={
+                  progress >= 1 ? theme.colors.primary : theme.colors.secondary
+                }
+                fill="none"
+                cx={size / 2}
+                cy={size / 2}
+                r={radius}
+                strokeDasharray={`${circum} ${circum}`}
+                strokeDashoffset={radius * Math.PI * 2 * (svgProgress / 100)}
+                strokeLinecap="round"
+                transform={`rotate(-90, ${size / 2}, ${size / 2})`}
+                {...{ strokeWidth }}
+              />
+            </Svg>
           </Progress>
         )}
       </Svg>
