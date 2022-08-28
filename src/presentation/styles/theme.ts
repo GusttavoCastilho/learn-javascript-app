@@ -11,6 +11,9 @@ export const theme = {
 			150: '#617070',
 		},
 		red: '#ff0000',
-		default: '#CCCCCC'
+		default: '#CCCCCC',
+		navigation: {
+			tint: '#2F95DC'
+		}
 	}
 } as const
