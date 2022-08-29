@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "90486262677",
+    "firebase_url": "https://startup-21fc5-default-rtdb.firebaseio.com",
+    "project_id": "startup-21fc5",
+    "storage_bucket": "startup-21fc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90486262677:android:c9769ac2c1776858d5049c",
+        "android_client_info": {
+          "package_name": "com.learnjavacriptapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90486262677-5n32b3i3u4aimio189moj48cb9t8jhg0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlvkFbxY8LK1eLLB3j7ml-fWyQP7XxQj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90486262677-5n32b3i3u4aimio189moj48cb9t8jhg0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "90486262677-7lgo3nf3rdj4qdvig1retobd7r8csu2m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gustavo.learn-javascript"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
