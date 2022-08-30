@@ -6,7 +6,7 @@ import { Text, Wrapper } from "./styles";
 export type ButtonProps = {
   children: React.ReactNode;
   isLoading?: boolean;
-  type?: "primary" | "secondary" | "tertiary";
+  type?: "primary" | "secondary" | "tertiary" | "quartiary";
 } & PressableProps;
 
 export const Button = ({

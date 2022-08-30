@@ -4,7 +4,7 @@ import { renderWithTheme } from "@utils/jest-helper";
 
 type MakeSutProps = {
   isLoading?: boolean;
-  type?: "primary" | "secondary" | "tertiary";
+  type?: "primary" | "secondary" | "tertiary" | 'quartiary';
 };
 
 const makeSut = (props?: MakeSutProps) => {
@@ -48,5 +48,11 @@ describe("<Button />", () => {
     const { getByTestId } = makeSut({ type: "tertiary" });
     const button = getByTestId("button");
     expect(button.props.style[0].backgroundColor).toBe("#9D69A3");
+  });
+
+  it("Should render type quartiary if passed", () => {
+    const { getByTestId } = makeSut({ type: "quartiary" });
+    const button = getByTestId("button");
+    expect(button.props.style[0].backgroundColor).toBe("#FF735C");
   });
 });

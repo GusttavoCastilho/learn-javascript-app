@@ -13,6 +13,9 @@ const WrapperModifiers = {
   tertiary: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.tertiary};
   `,
+  quartiary: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.orange};
+  `
 };
 
 export const Wrapper = styled.Pressable<WrapperProps>`
