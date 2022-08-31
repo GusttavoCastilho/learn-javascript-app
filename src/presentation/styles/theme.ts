@@ -7,6 +7,7 @@ export const theme = {
 		bg: '#F5F5F5',
 		dark: {
 			0: '#000',
+			50: '#394963',
 			100: '#222',
 			150: '#617070',
 		},
@@ -14,6 +15,7 @@ export const theme = {
 		default: '#CCCCCC',
 		navigation: {
 			tint: '#2F95DC'
-		}
+		},
+		orange: '#FF735C'
 	}
 } as const
