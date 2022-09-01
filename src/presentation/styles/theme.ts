@@ -16,6 +16,9 @@ export const theme = {
 		navigation: {
 			tint: '#2F95DC'
 		},
-		orange: '#FF735C'
+		orange: '#FF735C',
+		gray: {
+			0: '#A1A1A1'
+		}
 	}
 } as const
