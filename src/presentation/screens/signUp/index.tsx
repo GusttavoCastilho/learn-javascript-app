@@ -10,6 +10,8 @@ import {
 import { Button } from "@components/button";
 import { TextInput } from "@components/text-input";
 
+import { useAuth } from "../../context/auth/auth-context";
+
 import {
   BoxSignin,
   ButtonContainer,
@@ -23,14 +25,30 @@ import {
 } from "./styles";
 
 import StudentRegister from '../../assets/images/register.jpg'
+import { Alert } from "react-native";
 
 export const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const { signUp, user } = useAuth();
 
   const isDisabledButton = !name || !email || !phone || !password;
+
+  const handleSignUpUser = () => {
+    try {
+      const params = { name, email, phone, password }
+      signUp({ params });
+
+      if(user) {
+        Alert.alert("Success", "User created with success!");
+      }
+
+    } catch (error) {
+      Alert.alert("SignIn", "Invalid Credentials");
+    }
+  };
 
   return (
     <Wrapper>
@@ -73,7 +91,7 @@ export const SignUp = () => {
       </TextTerms>
 
       <ButtonContainer>
-        <Button type="quartiary" disabled={isDisabledButton} onPress={() => {}}>
+        <Button type="quartiary" disabled={isDisabledButton} onPress={handleSignUpUser}>
           Register
         </Button>
       </ButtonContainer>

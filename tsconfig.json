@@ -11,7 +11,8 @@
           "@assets/*": [ "assets/*"],
           "@styles/*": ["./src/presentation/styles/*"],
           "@utils/*": ["./src/presentation/utils/*"],
-          "@models/*": ["./src/domain/models/*"]
+          "@models/*": ["./src/domain/models/*"],
+          "@context/*": ["./src/presentation/context/*"]
       },
   },
 }

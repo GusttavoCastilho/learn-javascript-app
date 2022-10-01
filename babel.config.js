@@ -14,6 +14,7 @@ module.exports = function (api) {
             "@styles": "./src/presentation/styles",
             "@utils": "./src/presentation/utils",
             "@models": "./src/domain/models",
+            "@context": "./src/presentation/context"
           },
           extensions: [".js", ".jsx", ".ts", ".tsx"],
           root: ["./src"],

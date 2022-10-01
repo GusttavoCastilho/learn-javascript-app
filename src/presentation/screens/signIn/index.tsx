@@ -5,6 +5,8 @@ import { MaterialIcons, Octicons } from "@expo/vector-icons";
 import { TextInput } from "@components/text-input";
 import { Button } from "@components/button";
 
+import { useAuth } from "../../context/auth/auth-context";
+
 import {
   BoxSignup,
   ButtonContainer,
@@ -25,15 +27,26 @@ import {
 } from "./styles";
 
 import GoogleSvg from "../../assets/icons/google.svg";
-import StudentImg from '../../assets/images/student.jpg'
+import StudentImg from "../../assets/images/student.jpg";
+import { Alert } from "react-native";
 
 export const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { signIn, loading } = useAuth();
+
   const isDisabledButton = useMemo(() => {
     return !email || !password;
   }, [email, password]);
+
+  const handleSignInUser = () => {
+    try {
+      signIn(email, password);
+    } catch (error) {
+      Alert.alert("SignIn", "Invalid Credentials");
+    }
+  };
 
   return (
     <Wrapper>
@@ -60,7 +73,12 @@ export const SignIn = () => {
       <TextForgotPassword>Forgot Password?</TextForgotPassword>
 
       <ButtonContainer>
-        <Button type="quartiary" disabled={isDisabledButton} onPress={() => {}}>
+        <Button
+          type="quartiary"
+          disabled={isDisabledButton}
+          isLoading={loading}
+          onPress={handleSignInUser}
+        >
           Login
         </Button>
       </ButtonContainer>
