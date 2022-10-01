@@ -29,11 +29,15 @@ type SignupProps = {
   params: User;
 };
 
+type AuthProviderProps = {
+  children: React.ReactNode
+}
+
 const USER_COLLECTION = "@learn-javascript:user";
 
 const AuthContext = createContext<AuthContextProps | null>(null);
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({children}: AuthProviderProps) => {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState({} as User);
 
